@@ -1,0 +1,93 @@
+/* Setting a fixed background for the parallax effect */
+html {
+  background: url('Graphics/Wallpaper/PorscheFaded.png') no-repeat center center fixed;
+  background-size: cover;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  height: 100%;
+  width: 100%;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  overflow: overlay; /* Overlay scrollbar */
+  margin: 0; /* Remove margin */
+  height: 100%; /* Ensure full height */
+}
+
+/* Customizing the scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* Scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Ensure the track is transparent */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1d1d1d; /* Thumb color */
+  border-radius: 5px;
+}
+
+/* Navbar styles */
+.Navbar {
+  backdrop-filter: blur(5px);
+  position: sticky;
+  top: 10px;
+  margin: 0 5px;
+  background-color: #3030308a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.466);
+}
+
+.Navbar a:not(:has(.Logo)) {
+  position: relative; /* Needed for the ::after to be positioned correctly */
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 20px;
+  transition: color 0.4s ease;
+}
+
+/* Underline effect using ::after */
+.Navbar a:not(:has(.Logo))::after {
+  content: "";
+  position: absolute;
+  left: 65%;
+  bottom: -4px; /* space between text and underline */
+  height: 2px;
+  width: 0;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect expands the underline */
+.Navbar a:not(:has(.Logo)):hover::after {
+  left: 35px;
+  width: 60%;
+}
+
+.Navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.Logo {
+  height: 40px;
+  aspect-ratio: 1/1;
+  filter: invert(1);
+}
+
+.Icon {
+  height: 18px;
+  aspect-ratio: 1 / 1;
+  filter: invert(1);
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 6px;
+  position: relative;
+}
