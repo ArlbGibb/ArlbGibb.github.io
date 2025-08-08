@@ -30,19 +30,24 @@ body {
 
 /* Navbar styles */
 .Navbar {
-  backdrop-filter: blur(5px);
-  position: sticky;
-  top: 10px;
-  margin: 0 5px;
+  position: fixed; /* Changed from sticky to fixed */
+  top: 5px;           /* Stick to the very top */
+  left: 5px;
+  right: 5px;
+
+  margin: 0;        /* Remove margin to avoid shifting */
+  padding: 10px 15px;
+
   background-color: #3030308a;
+  backdrop-filter: blur(5px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 15px;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.339);
   border: 1px solid rgba(255, 255, 255, 0.466);
 }
+
 
 .Navbar a:not(:has(.Logo)) {
   position: relative; /* Needed for the ::after to be positioned correctly */
@@ -90,4 +95,20 @@ body {
   display: inline-block;
   margin-right: 6px;
   position: relative;
+}
+
+.Content {
+  margin: 100vh 5px 0 5px; /* Top, right, bottom, left */
+  width: calc(100% - 10px);
+  height: 100vh;
+  color: #ffffff;
+  background-color: #0000003f;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+}
+
+.Content .Header {
+  font-size: 50px;
+  font-weight: bolder;
 }
