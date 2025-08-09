@@ -1,0 +1,127 @@
+/* Setting a fixed background for the parallax effect */
+html {
+  background: url('Graphics/Wallpaper/918.png') no-repeat center center fixed;
+  background-size: cover;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  height: 100%;
+  width: 100%;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  overflow: overlay; /* Overlay scrollbar */
+  margin: 0; /* Remove margin */
+  height: 100%; /* Ensure full height */
+}
+
+/* Customizing the scrollbar */
+::-webkit-scrollbar {
+  width: 12px; /* Scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Ensure the track is transparent */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1d1d1d; /* Thumb color */
+  border-radius: 5px;
+}
+
+/* Navbar styles */
+.Navbar {
+  position: fixed; /* Changed from sticky to fixed */
+  top: 5px;           /* Stick to the very top */
+  left: 5px;
+  right: 5px;
+
+  margin: 0;        /* Remove margin to avoid shifting */
+  padding: 10px 15px;
+
+  background-color: #282b528a;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.339);
+  border: 1px solid rgba(255, 255, 255, 0.466);
+}
+
+
+.Navbar a:not(:has(.Logo)) {
+  position: relative; /* Needed for the ::after to be positioned correctly */
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 20px;
+  transition: color 0.4s ease;
+}
+
+/* Underline effect using ::after */
+.Navbar a:not(:has(.Logo))::after {
+  content: "";
+  position: absolute;
+  left: 65%;
+  bottom: -4px; /* space between text and underline */
+  height: 2px;
+  width: 0;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect expands the underline */
+.Navbar a:not(:has(.Logo)):hover::after {
+  left: 35px;
+  width: 60%;
+}
+
+.Navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.Logo {
+  height: 40px;
+  aspect-ratio: 1/1;
+  filter: invert(1);
+}
+
+.Icon {
+  height: 18px;
+  aspect-ratio: 1 / 1;
+  filter: invert(1);
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 6px;
+  position: relative;
+}
+
+.Content {
+  margin: 10%;
+  margin-top: 20vh;
+  padding-bottom: 10vh;
+  width: 70%;
+  height: auto;
+  color: #ffffff;
+  background-color: #282b528a;
+  backdrop-filter: blur(5px);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.159);
+}
+
+.Content > .Header {
+  font-size: 60px;
+  font-weight: bolder;
+}
+
+.Content > .Paragraph {
+  margin: 5px;
+  font-size: 30px;
+  padding: 40px;
+}
+
+.Gallery > img {
+  border-radius: 5px;
+  border: 2px solid rgba(78, 78, 78, 0.403);
+}

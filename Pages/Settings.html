@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davids Portfolio | Home</title>
+    <script src="../Scripts/Background.js"></script>
+  <link id="themeStylesheet" rel="stylesheet" href="../Main.css">
+  <script src="../Scripts/Theme.js" defer></script>
+  <style>
+    html {
+        color: white;
+    }
+
+    h1 {
+        padding: 20px;
+    }
+
+    .Box {
+  width: 20%;
+  padding: 15px;
+  margin: 20px;
+  color: #ffffff;
+  background-color: #00000027;
+  backdrop-filter: blur(5px);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.159);
+    }
+
+    #themeSelect {
+  padding: 10px;
+  color: #ffffff;
+  background-color: #00000089;
+  backdrop-filter: blur(5px);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.159);
+    }
+  </style>
+</head>
+<body>
+  <div class="Navbar">
+    <a href="../index.html">
+      <img class="Logo" src="../Graphics/Icons/House.png" alt="Home">
+    </a>
+    <div class="Navbar-links">
+      <a href="ProjectPage.html"><img class="Icon" src="../Graphics/Icons/Project.png" alt="Home">Projects</a>
+      <a href="AboutMe.html"><img class="Icon" src="../Graphics/Icons/Info.png" alt="Home">About Me</a>
+      <a href="Settings.html"><img class="Icon" src="../Graphics/Icons/Gear.png" alt="Home">Settings</a>
+    </div>
+  </div>
+
+  <div style="height: 70px;"></div>
+
+      <h1>Settings</h1>
+
+<div class="Box">
+  <label style="font-size: 25px;" for="themeSelect">Choose a theme:</label>
+<select id="themeSelect">
+    <option value="Main.css">Sunset</option>
+    <option value="Silver.css">Silver</option>
+    <option value="Rainy.css">Rainy</option>
+    <option value="Greyish.css">Greyish</option>
+</select>
+</div>
+
+</body>
+</html>
