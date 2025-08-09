@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Vocabulary",
+        "description": "idk why we need to know this🤷",
+        "image": "../Graphics/Vocab.png",
+        "link": "../Projects/Project1.html"
+    },
+    {
+        "title": "Website",
+        "description": "It's The website Your On rn",
+        "image": "../Graphics/Icons/Html.png",
+        "link": "../index.html"
+    }
+]

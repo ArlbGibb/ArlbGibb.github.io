@@ -4,8 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const themeLink = document.getElementById("themeStylesheet");
     const savedTheme = localStorage.getItem("selectedTheme");
 
-    // Detect if we are in a subfolder (like Pages/)
-    const inSubFolder = window.location.pathname.toLowerCase().includes("/pages/");
+const inSubFolder = 
+    window.location.pathname.toLowerCase().includes("/pages/") ||
+    window.location.pathname.toLowerCase().includes("/projects/");
+
 
     if (savedTheme) {
         // If in subfolder, go up one folder

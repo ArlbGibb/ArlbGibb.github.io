@@ -1,8 +1,8 @@
 /* Setting a fixed background for the parallax effect */
 html {
-  background: url('Graphics/Wallpaper/918.png') no-repeat center center fixed;
+    background: url('../Graphics/Wallpaper/Mountains.png') no-repeat center center fixed;
   background-size: cover;
-  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: #414159; /* Fallback color */
   height: 100%;
   width: 100%;
   font-family: 'Courier New', Courier, monospace;
@@ -24,7 +24,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #1d1d1d; /* Thumb color */
+  background-color: #1e26398a; /* Thumb color */
   border-radius: 5px;
 }
 
@@ -38,14 +38,13 @@ body {
   margin: 0;        /* Remove margin to avoid shifting */
   padding: 10px 15px;
 
-  background-color: #282b528a;
-  backdrop-filter: blur(5px);
+  background-color: #1e2639df;
+  backdrop-filter: blur(2px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.339);
-  border: 1px solid rgba(255, 255, 255, 0.466);
 }
 
 
@@ -104,10 +103,10 @@ body {
   width: 70%;
   height: auto;
   color: #ffffff;
-  background-color: #282b528a;
+  background-color: #1e2639df;
   backdrop-filter: blur(5px);
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.159);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.339);
 }
 
 .Content > .Header {
@@ -131,10 +130,10 @@ body {
   padding: 15px;
   margin: 20px;
   color: #ffffff;
-  background-color: #282b528a;
+  background-color: #1e2639df;
   backdrop-filter: blur(5px);
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.159);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.339);
 }
 
     #themeSelect {
@@ -144,4 +143,61 @@ body {
   backdrop-filter: blur(5px);
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.159);
+}
+
+
+.SearchBar {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 50px;
+  width: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.339);
+  border: none;
+  background-color: #6585d143;
+  width: 50%;
+  color: white;
+}
+
+.Items {
+  margin: 10px;
+  height: auto;
+  display: flex;              /* enable flexbox */
+  flex-wrap: wrap;            /* allow items to wrap to the next line */
+  justify-content: center;    /* center horizontally */
+  align-items: center;        /* center vertically in each row */
+}
+
+.Project {
+  margin: 10px;
+  width: 20%;
+  padding: 10px;
+  aspect-ratio: 4/5;
+  background-color: #1e2639df;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.339);
+}
+
+.Project h1 {
+  margin: 5px;
+}
+
+.Project button {
+  margin: 5px;
+  width: 80%;
+  background: #294296;
+  color: white;
+  padding: 5px;
+  border: none;
+}
+
+.Project button:hover {
+  background: #1f3373;
+}
+
+.Project img {
+  width: 80%;
+  aspect-ratio: 1/1;
+}
+
+.hide {
+  display: none;
 }

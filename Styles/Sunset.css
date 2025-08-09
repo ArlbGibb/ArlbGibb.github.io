@@ -1,7 +1,8 @@
 /* Setting a fixed background for the parallax effect */
 html {
+  background: url('../Graphics/Wallpaper/911.png') no-repeat center center fixed;
   background-size: cover;
-  background-color: rgb(26, 26, 26); /* Fallback color */
+  background-color: rgb(0, 0, 0); /* Fallback color */
   height: 100%;
   width: 100%;
   font-family: 'Courier New', Courier, monospace;
@@ -23,7 +24,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #1d1d1d; /* Thumb color */
+  background-color: rgb(255, 189, 173); /* Thumb color */
   border-radius: 5px;
 }
 
@@ -33,7 +34,7 @@ body {
   top: 5px;           /* Stick to the very top */
   left: 5px;
   right: 5px;
-
+  border-radius: 5px;
   margin: 0;        /* Remove margin to avoid shifting */
   padding: 10px 15px;
 
@@ -44,14 +45,14 @@ body {
   align-items: center;
   z-index: 1000;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.339);
-  border: 1px solid rgba(255, 255, 255, 0.466);
+  border: 1px solid rgba(255, 217, 173, 0.466);
 }
 
 
 .Navbar a:not(:has(.Logo)) {
   position: relative; /* Needed for the ::after to be positioned correctly */
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgb(255, 189, 173);
   font-weight: bold;
   font-size: 20px;
   transition: color 0.4s ease;
@@ -82,14 +83,14 @@ body {
 
 .Logo {
   height: 40px;
-  aspect-ratio: 1/1;
-  filter: invert(1);
+  aspect-ratio: 1 / 1;
+  filter: invert(1) sepia(1) saturate(15) hue-rotate(290deg) brightness(1);
 }
 
 .Icon {
   height: 18px;
   aspect-ratio: 1 / 1;
-  filter: invert(1);
+  filter: invert(1) sepia(1) saturate(15) hue-rotate(290deg) brightness(1);
   vertical-align: middle;
   display: inline-block;
   margin-right: 6px;
@@ -97,16 +98,17 @@ body {
 }
 
 .Content {
+  border-radius: 5px;
   margin: 10%;
   margin-top: 20vh;
   padding-bottom: 10vh;
   width: 70%;
   height: auto;
-  color: #ffffff;
-  background-color: #3030308a;
+  color: rgb(255, 217, 173);
+  background-color: #0000003f;
   backdrop-filter: blur(5px);
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.159);
+  border: 1px solid rgba(255, 217, 173, 0.179);
 }
 
 .Content > .Header {
@@ -122,15 +124,16 @@ body {
 
 .Gallery > img {
   border-radius: 5px;
-  border: 2px solid rgba(78, 78, 78, 0.403);
+  border: 2px solid rgba(255, 217, 173, 0.466);
 }
 
 .Box {
+  border-radius: 5px;
   width: 20%;
   padding: 15px;
   margin: 20px;
-  color: #ffffff;
-  background-color: #3030308a;
+  color: rgb(255, 189, 173);
+  background-color: #0000003f;
   backdrop-filter: blur(5px);
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.159);
@@ -143,4 +146,61 @@ body {
   backdrop-filter: blur(5px);
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.159);
+}
+
+
+.SearchBar {
+  margin: 10px;
+  padding: 5px;
+  border-radius: 0px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.339);
+  border: none;
+  background-color: #101010a5;
+  color: white;
+  width: 50%;
+}
+
+.Items {
+  margin: 10px;
+  height: auto;
+  display: flex;              /* enable flexbox */
+  flex-wrap: wrap;            /* allow items to wrap to the next line */
+  justify-content: center;    /* center horizontally */
+  align-items: center;        /* center vertically in each row */
+}
+
+.Project {
+  margin: 10px;
+  width: 20%;
+  padding: 10px;
+  aspect-ratio: 4/5;
+  background-color: #0000007e;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.339);
+}
+
+.Project h1 {
+  color: rgb(255, 189, 173);
+  margin: 5px;
+}
+
+.Project button {
+  margin: 5px;
+  width: 80%;
+  background: #6e3d26;
+  color: white;
+  padding: 5px;
+  border: none;
+}
+
+.Project button:hover {
+  background: #4b291a;
+}
+
+.Project img {
+  width: 80%;
+  aspect-ratio: 1/1;
+}
+
+.hide {
+  display: none;
 }

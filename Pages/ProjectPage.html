@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Davids Portfolio | Home</title>
-  <link id="themeStylesheet" rel="stylesheet" href="../Main.css">
+    <script src="../Scripts/Background.js"></script>
+  <link id="themeStylesheet" rel="stylesheet" href="../Styles/Main.css">
+  <script src="../Scripts/Search.js"></script>
   <script src="../Scripts/Theme.js" defer></script>
 </head>
 <body>
@@ -18,8 +20,20 @@
       <a href="Settings.html"><img class="Icon" src="../Graphics/Icons/Gear.png" alt="Home">Settings</a>
     </div>
   </div>
-
-  <div style="height: 2000px;">
+<div class="Content">
+    <input class="SearchBar" type="text" placeholder="Search For Projects" SearchBar>
+  <div class="Items" ProjectContainer>
   </div>
+</div>
+
+<template ProjectCard>
+    <div class="Project">
+      <img src="../Graphics/Vocab.png" Image>
+      <h1 Header>vocabulary</h1>
+      <a Description>idk why we need to know this🤷</a>
+      <button Button>𝒱𝒾𝑒𝓌 𝒫𝓇𝑜𝒿𝑒𝒸𝓉</button>
+    </div>
+</template>
+
 </body>
 </html>
