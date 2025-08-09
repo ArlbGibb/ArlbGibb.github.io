@@ -182,14 +182,14 @@ body {
 .Project button {
   margin: 5px;
   width: 80%;
-  background: #26456e;
+  background: #5e5e5e;
   color: white;
   padding: 5px;
   border: none;
 }
 
 .Project button:hover {
-  background: #1d3554;
+  background: #484848;
 }
 
 .Project img {
